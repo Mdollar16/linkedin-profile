@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashid Mohammed – LinkedIn Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #f3f2ef; color: #1c1e21; }
+
+/* Navbar */
+.navbar { background-color: #0073b1; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+.navbar h2 { margin: 0; font-size: 20px; }
+.navbar a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; }
+.navbar a:hover { text-decoration: underline; }
+
+/* Profile Header */
+.profile-banner { width: 100%; height: 150px; background: url('https://via.placeholder.com/1100x150') center/cover no-repeat; border-radius: 10px 10px 0 0; }
+.profile-header { display: flex; align-items: flex-end; padding: 0 20px; margin-top: -75px; flex-wrap: wrap; }
+.profile-header img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; margin-right: 30px; }
+.profile-header .info h1 { margin: 0; font-size: 28px; }
+.profile-header .info h3 { margin: 5px 0; font-weight: 500; font-size: 18px; color: #333; }
+.profile-header .info p { margin: 5px 0; font-size: 14px; color: #555; }
+.connect-btn { background-color: #00a0dc; color: white; padding: 10px 25px; border: none; border-radius: 25px; cursor: pointer; font-weight: 500; margin-top: 10px; transition: 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+.connect-btn:hover { background-color: #0085b0; }
+
+/* Layout */
+.container { display: flex; max-width: 1100px; margin: 20px auto; gap: 20px; flex-wrap: wrap; }
+.main { flex: 2; min-width: 300px; }
+.sidebar { flex: 1; min-width: 220px; }
+
+/* Sections */
+.section { background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+.section h3 { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+/* Icons */
+.section h3::before { content: "📌"; }
+/* Skills */
+.skills span { display: inline-block; background-color: #e1ecf4; color: #0073b1; padding: 5px 12px; margin: 5px; border-radius: 20px; font-size: 14px; }
+/* Tabs */
+.tabs { display: flex; border-bottom: 1px solid #ddd; margin-bottom: 15px; }
+.tab { padding: 10px 20px; cursor: pointer; font-weight: 500; }
+.tab.active { border-bottom: 3px solid #0073b1; color: #0073b1; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+/* Followers */
+.followers { display: flex; flex-wrap: wrap; }
+.followers div { display: flex; align-items: center; margin: 5px; }
+.followers div img { width: 30px; height: 30px; border-radius: 50%; margin-right: 5px; }
+/* See more toggles */
+.see-more { color: #0073b1; cursor: pointer; text-decoration: underline; font-size: 14px; }
+.more-content { display: none; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>LinkedIn</h2>
+    <div class="menu">
+        <a href="#">My Network</a>
+        <a href="#">Jobs</a>
+        <a href="#">Messaging</a>
+        <a href="#">Notifications</a>
+    </div>
+</div>
+
+<!-- Banner -->
+<div class="profile-banner"></div>
+
+<!-- Profile Header -->
+<div class="profile-header">
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+    <div class="info">
+        <h1>Rashid Mohammed</h1>
+        <h3>Commercial Strategist</h3>
+        <p>500+ Followers | 200+ Connections</p>
+        <button class="connect-btn" onclick="alert('Connection request sent!')">Connect</button>
+        <p>📞 +1 917 719 2111 | ✉️ rashidmohammed41@yahoo.com</p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="section menu-section">
+            <h3>Navigation</h3>
+            <a href="#">Dashboard</a>
+            <a href="#">My Network</a>
+            <a href="#">Messaging</a>
+            <a href="#">Notifications</a>
+        </div>
+
+        <div class="section">
+            <h3>Followers</h3>
+            <div class="followers">
+                <div><img src="https://via.placeholder.com/30" alt="Follower"> Alice</div>
+                <div><img src="https://via.placeholder.com/30" alt="Follower"> Bob</div>
+                <div><img src="https://via.placeholder.com/30" alt="Follower"> Carol</div>
+                <div><img src="https://via.placeholder.com/30" alt="Follower"> David</div>
+            </div>
+        </div>
+
+        <div class="section skills">
+            <h3>Skills & Endorsements</h3>
+            <span>Business Strategy (30)</span>
+            <span>Market Analysis (25)</span>
+            <span>Project Management (20)</span>
+            <span>Leadership (22)</span>
+            <span>Negotiation (18)</span>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="section about">
+            <h3>About</h3>
+            <p>
+                Professional Commercial Strategist with extensive experience in business growth and operational optimization.
+                <span class="more-content" id="moreAbout">Expert in driving revenue, developing strategic plans, and leading teams to achieve commercial objectives.</span>
+                <span class="see-more" onclick="toggleMore('moreAbout', this)">See more</span>
+            </p>
+        </div>
+
+        <div class="section tabs-section">
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('experience')">Experience</div>
+                <div class="tab" onclick="showTab('education')">Education</div>
+                <div class="tab" onclick="showTab('projects')">Projects</div>
+            </div>
+
+            <div id="experience" class="tab-content active">
+                <div>
+                    <strong>Lead Commercial Strategist</strong> – Global Business Solutions (2022–Present)
+                    <p>Driving business development strategies and implementing commercial initiatives.</p>
+                    <span class="more-content" id="moreExp1">Oversaw cross-functional teams and expanded operations into new markets.</span>
+                    <span class="see-more" onclick="toggleMore('moreExp1', this)">See more</span>
+                </div>
+                <div>
+                    <strong>Business Analyst</strong> – MarketEdge Ltd (2019–2022)
+                    <p>Performed market research and supported revenue growth projects.</p>
+                    <span class="more-content" id="moreExp2">Developed actionable insights improving sales efficiency by 15%.</span>
+                    <span class="see-more" onclick="toggleMore('moreExp2', this)">See more</span>
+                </div>
+            </div>
+
+            <div id="education" class="tab-content">
+                <div><strong>MBA – International Business</strong> – University of Lagos (2017–2019)</div>
+                <div><strong>BSc – Economics</strong> – University of Ibadan (2012–2016)</div>
+            </div>
+
+            <div id="projects" class="tab-content">
+                <div><strong>International Market Expansion</strong> – Launched operations in two new countries, increasing revenue by 20%.</div>
+                <div><strong>Operational Efficiency Program</strong> – Streamlined processes, reducing costs by 15%.</div>
+            </div>
+        </div>
+
+        <div class="section recommendations">
+            <h3>Recommendations</h3>
+            <div>
+                <p>"Rashid is a strategic thinker who delivers results beyond expectations. Excellent leadership and insight." – Jane Doe</p>
+            </div>
+            <div>
+                <p>"A professional with sharp analytical skills and deep understanding of market dynamics." – John Smith</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleMore(id, element) {
+    const content = document.getElementById(id);
+    if (content.style.display === "inline") {
+        content.style.display = "none";
+        element.innerText = "See more";
+    } else {
+        content.style.display = "inline";
+        element.innerText = "See less";
+    }
+}
+
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+    document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
